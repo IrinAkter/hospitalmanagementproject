@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2016 7:42:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Department" table="department" catalog="hospitalmanagement" optimistic-lock="version">
+        <id name="deptId" type="int">
+            <column name="dept_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="deptName" type="string">
+            <column name="dept_name" length="45" />
+        </property>
+        <property name="managerId" type="string">
+            <column name="manager_id" length="45" />
+        </property>
+        <property name="location" type="string">
+            <column name="location" />
+        </property>
+        <set name="pharmasists" table="pharmasist" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="deptidp" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Pharmasist" />
+        </set>
+        <set name="receptionists" table="receptionist" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="deptididrec" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Receptionist" />
+        </set>
+        <set name="doctorTables" table="doctor_table" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="dept" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.DoctorTable" />
+        </set>
+        <set name="nurses" table="nurse" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="deptid" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Nurse" />
+        </set>
+        <set name="accountants" table="accountant" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="deptidac" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Accountant" />
+        </set>
+    </class>
+</hibernate-mapping>

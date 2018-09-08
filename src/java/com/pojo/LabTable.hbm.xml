@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2016 7:42:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.LabTable" table="lab_table" catalog="hospitalmanagement" optimistic-lock="version">
+        <id name="labno" type="string">
+            <column name="labno" length="5" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="doctorTable" class="com.pojo.DoctorTable" fetch="select">
+            <column name="doctorid" length="5" not-null="true" />
+        </many-to-one>
+        <many-to-one name="laboratorist" class="com.pojo.Laboratorist" fetch="select">
+            <column name="laboratoristid" not-null="true" />
+        </many-to-one>
+        <many-to-one name="patientTable" class="com.pojo.PatientTable" fetch="select">
+            <column name="pid" length="5" not-null="true" />
+        </many-to-one>
+        <property name="weight" type="int">
+            <column name="weight" not-null="true" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" not-null="true" />
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="45" not-null="true" />
+        </property>
+        <property name="patientType" type="string">
+            <column name="patient_type" length="45" not-null="true" />
+        </property>
+        <property name="serviceCharge" type="double">
+            <column name="service_charge" precision="22" scale="0" not-null="true" />
+        </property>
+        <set name="outpatientTables" table="outpatient_table" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="labno" length="5" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.OutpatientTable" />
+        </set>
+        <set name="inpatientTables" table="inpatient_table" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="labno" length="5" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.InpatientTable" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+            google.load('search', '1');
+            google.setOnLoadCallback(function () {
+                google.search.CustomSearchControl.attachAutoCompletion(
+                        '00407923554221139:3x-bjd-osd8',
+                        document.getElementById('q'),
+                        'cse-search-box');
+            });
+        </script>
+        <form action="http://www.google.com/site-search.aspx" target="_new" id="cse-search-box">
+            <div>
+                <input type="hidden" name="cx" value="004079235593504221139:3x-bjd-osd8" />
+                <input type="hidden" name="cof" value="FORID:10" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="text" name="q" id="q" autocomplete="off" size="31" />
+                <input type="submit" name="sa" value="Search" />
+            </div>
+        </form>
+        <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en&sitesearch=true"></script>
+
+    </body>
+</html>

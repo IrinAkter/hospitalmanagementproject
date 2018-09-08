@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="hospitalmanagement"/>
+  <table-filter match-name="employee_table"/>
+  <table-filter match-name="lab_table"/>
+  <table-filter match-name="accountant"/>
+  <table-filter match-name="department"/>
+  <table-filter match-name="doctor_table"/>
+  <table-filter match-name="outpatient_table"/>
+  <table-filter match-name="inpatient_table"/>
+  <table-filter match-name="admin"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="pharmasist"/>
+  <table-filter match-name="receptionist"/>
+  <table-filter match-name="patient_table"/>
+  <table-filter match-name="bill_room"/>
+  <table-filter match-name="laboratorist"/>
+  <table-filter match-name="login"/>
+  <table-filter match-name="room_table"/>
+  <table-filter match-name="contact"/>
+  <table-filter match-name="nurse"/>
+</hibernate-reverse-engineering>

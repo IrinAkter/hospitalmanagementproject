@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2016 7:42:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.EmployeeTable" table="employee_table" catalog="hospitalmanagement" optimistic-lock="version">
+        <id name="employeeId" type="string">
+            <column name="employee_id" length="5" />
+            <generator class="assigned" />
+        </id>
+        <property name="managerId" type="string">
+            <column name="manager_id" length="45" not-null="true" />
+        </property>
+        <property name="departmentId" type="string">
+            <column name="department_id" length="45" not-null="true" />
+        </property>
+        <property name="departmentName" type="string">
+            <column name="department_name" length="45" not-null="true" />
+        </property>
+        <property name="postName" type="string">
+            <column name="post_name" length="45" not-null="true" />
+        </property>
+        <property name="employeeName" type="string">
+            <column name="employee_name" length="45" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" />
+        </property>
+        <property name="phoneNo" type="string">
+            <column name="phone_no" length="45" not-null="true" />
+        </property>
+        <property name="hireDate" type="date">
+            <column name="hire_date" length="10" not-null="true" />
+        </property>
+        <property name="salary" type="double">
+            <column name="salary" precision="22" scale="0" not-null="true" />
+        </property>
+        <set name="pharmasists" table="pharmasist" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empidp" length="5" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Pharmasist" />
+        </set>
+        <set name="doctorTables" table="doctor_table" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empid" length="5" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.DoctorTable" />
+        </set>
+        <set name="accountants" table="accountant" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empidac" length="5" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Accountant" />
+        </set>
+        <set name="nurses" table="nurse" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empid" length="5" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="com.pojo.Nurse" />
+        </set>
+        <set name="receptionists" table="receptionist" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="empid" length="5" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Receptionist" />
+        </set>
+    </class>
+</hibernate-mapping>

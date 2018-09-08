@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2016 7:42:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.User" table="user" catalog="hospitalmanagement" optimistic-lock="version">
+        <id name="usertype" type="string">
+            <column name="usertype" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="id" type="int">
+            <column name="id" not-null="true" unique="true" />
+        </property>
+        <set name="receptionists" table="receptionist" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usertype" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Receptionist" />
+        </set>
+        <set name="pharmasists" table="pharmasist" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usertype" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Pharmasist" />
+        </set>
+        <set name="doctorTables" table="doctor_table" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usertype" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.DoctorTable" />
+        </set>
+        <set name="laboratorists" table="laboratorist" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usertype" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Laboratorist" />
+        </set>
+        <set name="patientTables" table="patient_table" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usertype" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.PatientTable" />
+        </set>
+        <set name="admins" table="admin" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usertype" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Admin" />
+        </set>
+        <set name="accountants" table="accountant" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usertype" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Accountant" />
+        </set>
+        <set name="logins" table="login" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_type" length="45" />
+            </key>
+            <one-to-many class="com.pojo.Login" />
+        </set>
+        <set name="nurses" table="nurse" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usertype" length="45" not-null="true" />
+            </key>
+            <one-to-many class="com.pojo.Nurse" />
+        </set>
+    </class>
+</hibernate-mapping>

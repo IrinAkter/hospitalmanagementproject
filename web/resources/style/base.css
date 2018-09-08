@@ -1,0 +1,951 @@
+.clear { 
+    clear:both;
+}
+body { 
+    margin:0;
+    padding:0; 
+    text-align:center;
+    min-width:960px; 
+    background:#FFF url(../images/bg-body.png) top no-repeat fixed;
+    font:normal 12px arial; 
+    color:#4f4c4c; 
+} 
+/* Changed bg-body.gif to bg-body.png as part of image optimization for sitespeed */
+
+div.wrapper {
+    margin:0 auto;
+    text-align:left;
+    width:960px; 
+    padding:0 0 50px 0;
+}
+div.user {
+    position:relative; 
+    z-index:9; 
+    padding:30px 15px;
+}
+/********************************************************************
+header
+*********************************************************************/
+div.header { 
+    position:relative; 
+    z-index:9; 
+    padding:30px 15px;
+}
+div.header a.logo {  }
+
+div.header form#cse-search-box {
+    position:absolute;
+    bottom:53px;
+    right:5px;
+}
+div.header form#cse-search-box input#cse-search-box-input {
+    border:1px solid #88d0c8;
+    padding:3px; 
+    font:normal 11px arial; 
+    background:none; 
+}
+div.header form#cse-search-box input#cse-search-box-go { 
+    cursor:pointer; 
+    border:1px solid #88d0c8;
+    padding:3px; 
+    font:normal 11px arial;
+    background:url(../images/bg-button.gif) 0 0 repeat-x;
+    color:#fff; 
+    font-weight:bold;
+}
+div.header form#cse-search-box input#cse-search-box-go.button-hover {
+    background:url(../images/bg-button.gif) 0 -10px repeat-x;
+    color:#fff; 
+    font-weight:bold; 
+}
+
+div.header ul.nav { 
+    position:absolute; 
+    bottom:25px; 
+    right:0px; 
+    font:bold 11px arial;
+    color:#0e3d61;
+}
+div.header ul.nav li { 
+    float:left;
+    position:relative; 
+}
+div.header ul.nav li.divider { 
+    margin:2px 0 0 0; 
+}
+div.header ul.nav li a { 
+    display:block; 
+    float:left; 
+    color:#0e3d61; 
+    text-decoration:none; 
+    padding:2px 2px; 
+}
+div.header ul.nav li a:hover, div.header ul.nav li.active a { 
+    color:#5ba494; 
+}
+
+/********************************************************************
+home page "flash"
+*********************************************************************/
+div.flash { 
+    position:relative; 
+    z-index:8; 
+    height:378px;
+}
+
+/* cycles */
+div.flash div.cycle { 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:538px;
+    height:378px;
+}
+div.flash div.cycle h1 { 
+    position:absolute;
+    z-index:9;
+    bottom:0; 
+    left:0; 
+    width:538px;
+    height:102px;
+    background:url(../images/hp-cycle-h1.gif) 15px 15px no-repeat;
+    text-indent:-9999px; 
+}
+div.flash div.cycle div.h1-bg {
+    position:absolute;
+    z-index:9; 
+    bottom:0; 
+    left:0; 
+    width:538px; 
+    height:105px;
+    background:url(../images/hp-cycle-h1-bg.png);
+}
+div.flash div.cycle ul.cycles {
+    position:absolute; 
+    z-index:8;
+    top:0;
+    left:0;
+    width:538px;
+    height:378px;
+}
+div.flash div.cycle ul.cycles li { 
+    display:none; 
+    position:absolute;
+    top:0;
+    left:0; 
+    width:538px;
+    height:378px;
+}
+div.flash div.cycle ul.cycles li span {
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:265px; 
+    height:39px;
+    text-indent:-9999px;
+}
+
+/* main background images */
+div.flash div.cycle ul.cycles li#cycle-1 {
+    background:url(../images/hp-cycle-1.jpg) 0 0 no-repeat;
+}
+div.flash div.cycle ul.cycles li#cycle-2 {
+    background:url(../images/hp-cycle-2.jpg) 0 0 no-repeat;
+}
+div.flash div.cycle ul.cycles li#cycle-3 { 
+    background:url(../images/hp-cycle-3.jpg) 0 0 no-repeat;
+}
+div.flash div.cycle ul.cycles li#cycle-4 { 
+    background:url(../images/hp-cycle-4.jpg) 0 0 no-repeat;
+}
+div.flash div.cycle ul.cycles li#cycle-5 { 
+    background:url(../images/hp-cycle-5.jpg) 0 0 no-repeat; 
+}
+
+/* text background images */
+div.flash div.cycle ul.cycles li#cycle-1 span { 
+    background:url(../images/hp-cycle-1.png) right 0 no-repeat; 
+}
+div.flash div.cycle ul.cycles li#cycle-2 span {
+    background:url(../images/hp-cycle-2.png) right 0 no-repeat;
+}
+div.flash div.cycle ul.cycles li#cycle-3 span { 
+    background:url(../images/hp-cycle-3.gif) right 0 no-repeat;
+}
+div.flash div.cycle ul.cycles li#cycle-4 span {
+    background:url(../images/hp-cycle-4.png) right 0 no-repeat;
+}
+div.flash div.cycle ul.cycles li#cycle-5 span { 
+    background:url(../images/hp-cycle-5.png) right 0 no-repeat;
+}
+/* Changed hp-cycle-1.gif, hp-cycle-2.gif, hp-cycle-4.gif, and hp-cycle-5.gif from .gif to .png for site speed image optimization*/
+
+/* blocks */
+div.flash div.blocks {
+    position:absolute; 
+    top:0; 
+    right:0; 
+    width:414px;
+    height:378px; 
+}
+div.flash div.blocks div.block { 
+    width:203px;
+    height:185px;
+    overflow:hidden;
+}
+div.flash div.blocks div.block-content { 
+    position:absolute; 
+    top:150px; 
+    left:0; 
+    width:203px; 
+    height:185px; 
+    background:#a5dad6 url(../images/hp-block-content-bg.png) right bottom no-repeat; 
+    color:#0e3d61;
+}
+/* Change hp-block-content-bg.gif to hp-block-content-bg.png for site speed image optimization */
+div.flash div.blocks div.block-content h2 {
+    padding:10px;
+    background:url(../images/hp-block-content-trigger.png) 183px 12px no-repeat; 
+    font-size:14px; 
+}
+/* Change hp-block-content-trigger.gif to hp-block-content-trigger.png for site speed image optimization */
+div.flash div.blocks div.block-content ul { 
+    padding:10px; 
+    position:absolute;
+    bottom:0; 
+    left:0; 
+}
+div.flash div.blocks div.block-content ul li {
+    background:url(../images/hp-block-content-li.png) 0 4px no-repeat; 
+    padding:0 0 0 12px;
+    margin:2px 0; 
+}
+/* Changed hp-block-content-li.gif to hp-block-content-li.png for site speed image optimization */
+div.flash div.blocks div.block-content a {
+    color:#0e3d61; 
+    text-decoration:none;
+}
+div.flash div.blocks div.block-content a:hover {
+    text-decoration:underline;
+}
+
+div.flash div.blocks div#block-1 {
+    position:absolute; 
+    top:0; 
+    left:0;
+    background:url(../images/hp-block-1.jpg) 0 0 no-repeat;
+}
+div.flash div.blocks div#block-2 {
+    position:absolute;
+    top:0; 
+    right:0; 
+    background:url(../images/hp-block-2.jpg) 0 0 no-repeat;
+}
+div.flash div.blocks div#block-3 {
+    position:absolute;
+    bottom:0;
+    left:0; 
+    background:url(../images/hp-block-3.jpg) 0 0 no-repeat;
+}
+div.flash div.blocks div#block-4 {
+    position:absolute;
+    bottom:0;
+    right:0;
+    background:url(../images/hp-block-4.jpg) 0 0 no-repeat;
+}
+
+/********************************************************************
+internal page banner
+*********************************************************************/
+div.banner {
+    position:relative; 
+    z-index:8;
+    height:220px; 
+}
+div.banner span {
+    position:absolute; 
+    z-index:8;
+    bottom:15px;
+    left:15px;
+    width:500px; 
+    height:40px;
+    text-indent:-9999px;
+}
+div.banner table {
+    position:relative;
+    z-index:9;
+    width:100%;
+    font-size:14px; 
+    border-bottom:1px solid #fff;
+}
+div.banner table td {
+    width:25%; 
+    border-right:1px solid #fff;
+}
+div.banner table td a { 
+    display:block;
+    padding:15px 15px 13px 25px;
+    background:#a5dad6 url(../images/bg-banner-a.gif) 215px 17px no-repeat; color:#0e3d61;
+    text-decoration:none; 
+}
+div.banner table td a:hover { 
+    text-decoration:underline;
+}
+div.banner table td.active a {
+    color:#fff;
+    background:#506C96 url(../images/bg-banner-a-hover.gif) 215px 17px no-repeat;
+}
+
+div.banner table td div {
+    position:relative;
+    width:100%;
+}
+div.banner table td div div {
+    display:none;
+    position:absolute;
+    top:44px; 
+    left:-1px; 
+    width:100%; 
+    height:176px; 
+    background:#a5dad6 url(../images/hp-block-content-bg.png) right bottom no-repeat;
+    color:#0e3d61; 
+    border:1px solid #fff;
+    border-width:0 1px;
+}
+/* Changed hp-block-content-bg.gif to hp-block-content-bg.png for site speed image optimization */
+div.banner table td div div ul { 
+    font-size:12px; 
+    position:absolute;
+    bottom:0; 
+    left:0; 
+    padding:10px;
+}
+div.banner table td div div ul li {
+    background:url(../images/hp-block-content-li.png) 0 4px no-repeat;
+    padding:0 0 0 12px;
+    margin:2px 0; 
+}
+/* Changed hp-block-content-li.gif to hp-block-content-li.png for site speed image optimization */
+div.banner table td div div ul li a {
+    display:inline;
+    background:none;
+    padding:0px; 
+}
+div.banner table td div div ul li a {
+    background:none; 
+}
+
+div#banner-about { 
+    background:#506c96 url(../images/banner-other.jpg) right bottom no-repeat;
+}
+div#banner-medical {
+    background:#506c96 url(../images/banner-medical.jpg) right bottom no-repeat;
+}
+div#banner-patients {
+    background:#506c96 url(../images/banner-patients.jpg) right bottom no-repeat;
+}
+div#banner-health {
+    background:#506c96 url(../images/banner-health.jpg) right bottom no-repeat;
+}
+div#banner-other {
+    background:#506c96 url(../images/banner-other.jpg) right bottom no-repeat;
+}
+div#banner-center-childcare { 
+    background:#506c96 url(../images/banner-center-childcare.jpg) right bottom no-repeat;
+}
+div#banner-center-surgical { 
+    background:#506c96 url(../images/banner-center-surgical.jpg) right bottom no-repeat;
+}
+div#banner-center-joint {
+    background:#506c96 url(../images/banner-center-joint.jpg) right bottom no-repeat;
+}
+div#banner-center-emergency { 
+    background:#506c96 url(../images/banner-center-emergency.jpg) right bottom no-repeat;
+}
+div#banner-center-aesthetic {
+    background:#506c96 url(../images/banner-center-aesthetic.jpg) right bottom no-repeat;
+}
+
+div#banner-about span { 
+    background:url(../images/banner-about.gif) 0 bottom no-repeat;
+}
+div#banner-medical span { 
+    background:url(../images/banner-medical.gif) 0 bottom no-repeat;
+}
+div#banner-patients span { 
+    background:url(../images/banner-patients.gif) 0 bottom no-repeat;
+}
+div#banner-health span {
+    background:url(../images/banner-health.gif) 0 bottom no-repeat; 
+}
+div#banner-other span {
+    background:url(../images/banner-other.gif) 0 bottom no-repeat; 
+}
+div#banner-center-childcare span { 
+    background:url(../images/banner-center-childcare.gif) 0 bottom no-repeat;
+}
+div#banner-center-surgical span {
+    background:url(../images/banner-center-surgical.gif) 0 bottom no-repeat;
+}
+div#banner-center-joint span { 
+    background:url(../images/banner-center-joint.gif) 0 bottom no-repeat;
+}
+div#banner-center-emergency span { 
+    background:url(../images/banner-center-emergency.gif) 0 bottom no-repeat;
+}
+div#banner-center-aesthetic span {
+    background:url(../images/banner-center-aesthetic.gif) 0 bottom no-repeat;
+}
+
+
+/********************************************************************
+page
+*********************************************************************/
+div.page {
+    padding:30px 15px 80px 15px;
+}
+div.page div.left { 
+    float:left; width:300px; 
+}
+div.page div.right { 
+    float:right; width:600px;
+}
+
+/* general typography */
+div.page h1 { 
+    font:normal 28px arial;
+    color:#5e6d92;
+    margin:0 0 25px 0;
+}
+div.page h2 { 
+    font:normal 15px arial;
+    color:#53b894;
+    margin:0 0 6px 0; 
+    text-transform:uppercase;
+    font-weight:bold;
+}
+div.page h2.ren { 
+    color:#5e6d92; 
+    text-transform:none;
+}
+div.page h3 { 
+    font:bold 12px arial;
+    margin:0 0 5px 0;
+    text-transform:uppercase;
+}
+div.page h4 { 
+    font-weight:bold;
+}
+div.page p { 
+    margin:5px 0 15px 0;
+    line-height:1.5em;
+}
+div.page p.strong {
+    font:bold 14px arial;
+    color:#5e6d92;
+    margin:0 0 25px 0;
+    line-height:1.4em;
+}
+div.page p.date {
+    margin:0px 0 10px 0;
+}
+div.page ul { 
+    margin:5px 0 10px 20px;
+    line-height:1.5em;
+    list-style-type:disc;
+}
+div.page ol { 
+    margin:5px 0 10px 20px;
+    line-height:1.5em;
+    list-style-type:decimal;
+}
+div.page strong { 
+    font-weight:bold;
+}
+div.page em { 
+    font-style:italic;
+}
+div.page a { 
+    color:#5ba494; 
+}
+div.page a:hover { 
+    color:#596a90;
+}
+
+/* "anchor" links/js toggles */
+div.anchor { 
+    padding:0 0 5px 0;
+    border-bottom:1px dotted #5ba494;
+    margin:0 0 10px 0;
+}
+div.anchor .trigger { 
+    cursor:pointer;
+}
+div.anchor .target {
+    display:none; 
+}
+
+/* for second level accordion (used on joint replacement) */
+div.page div.anchor .target .anchor {  }
+div.page div.anchor .target h3.trigger { 
+    color:#5ba494;
+}
+
+/* "zebra tables */
+table.zebra { 
+    margin:5px 0 10px 0;
+    border:1px solid #4f4c4c;
+    border-bottom:0;
+}
+table.zebra td { 
+    padding:6px;
+    border-bottom:1px solid #4f4c4c;
+}
+table.zebra tr.odd td {
+    background:#f2f2f2;
+}
+table.zebra tr.even td { 
+    background:#e0e0e0;
+}
+
+/* common sub nav */
+div.page div.subnav {
+    font-size:14px;
+}
+div.page div.subnav ul { 
+    color:#5f6e94; 
+    margin:15px 0;
+    list-style:none;
+    line-height:normal;
+    border-bottom:1px dotted #5ba494;
+}
+div.page div.subnav ul li { 
+    border-top:1px dotted #5ba494;
+}
+div.page div.subnav ul li a {
+    display:block; 
+    color:#596a90; 
+    text-decoration:none;
+    padding:5px 0 5px 14px;
+    line-height:1.4em; 
+}
+div.page div.subnav ul li.active a, div.page div.subnav ul li.hover a { 
+    background:url(../images/bg-quick-links.png) 0 10px no-repeat; }
+/* Changed bg-quick-links.gif to bg-quick-links.png for site speed image optimization */
+
+div.page div.subnav ul li ul { 
+    display:none; 
+    font-size:12px;
+    position:relative;
+    margin:0px 0 12px 0;
+    border:0; 
+}
+div.page div.subnav ul li.active ul {
+    display:block;
+}
+div.page div.subnav ul li ul li {
+    border:0; 
+}
+div.page div.subnav ul li ul li a {
+    padding:6px 0 6px 28px;
+}
+div.page div.subnav ul li ul li a, div.page div.subnav ul li.active ul li a, div.page div.subnav ul li.hover ul li a, div.page div.subnav ul li ul li.active a { 
+    background:none; 
+    padding:5px 0 5px 28px;
+}
+div.page div.subnav ul li ul li.active {
+    font-weight:bold; 
+}
+div.page div.subnav ul li ul li a:hover {
+    color:#5ba494;
+}
+
+/* quick links */
+div.page div.quick-links {
+    font-size:14px;
+}
+div.page div.quick-links h2 {
+    font:normal 18px arial;
+    text-transform:uppercase;
+    color:#596a90;
+    border:1px solid #88d0c8;
+    border-width:2px 0 1px 0;
+    padding:4px 0; 
+}
+div.page div.quick-links h2 a {
+    color:#596a90; 
+    text-decoration:none;
+}
+div.page div.quick-links h2 a:hover {
+    color:#88d0c8; 
+}
+div.page div.quick-links ul { 
+    color:#5f6e94;
+    margin:15px 0 40px 0;
+    list-style-type:none;
+    line-height:normal;
+}
+div.page div.quick-links ul li {
+    background:url(../images/bg-quick-links.png) 0 3px no-repeat;
+    padding:0 0 0 14px;
+    margin:10px; 
+}
+/* Changed bg-quick-links.gif to bg-quick-links.png for site speed image optimization */
+div.page div.quick-links ul li a {
+    color:#596a90;
+    text-decoration:none;
+}
+div.page div.quick-links ul li a:hover { 
+    color:#4f4c4c;
+    text-decoration:underline;
+}
+
+div.page div.quick-links div.joint-commission { 
+    margin:10px 0;
+    border:1px solid #88d0c8;
+    border-width:2px 0 1px 0;
+    padding:4px 0;
+}
+div.page div.quick-links div.joint-commission a { 
+    display:block;
+    padding:0 0 0 48px;
+    background:url(../images/footer-icons-joint-commission.png) left no-repeat;
+    color:#596a90;
+    font:normal 18px arial;
+    text-transform:uppercase;
+}
+
+/* news items */
+div.page div.news h2 {
+    font:normal 18px arial;
+    text-transform:uppercase;
+    color:#596a90;
+    border:1px solid #88d0c8;
+    border-width:2px 0 1px 0;
+    padding:4px 0; 
+}
+div.page div.cms-item {
+    position:relative;
+    border-bottom:1px dotted #5ba494;
+    padding:20px 0 10px 0;
+}
+div.page div.with-image {
+    width:475px; 
+    padding:20px 0 20px 120px;
+}
+div.page div.with-image img.bg {
+    position:absolute;
+    top:20px; 
+    left:0;
+    width:90px;
+    height:90px; 
+}
+div.page div.cms-item h3 a {
+    text-decoration:none; 
+}
+div.page div.cms-item h3 a:hover {
+    color:#5ba494;
+    text-decoration:underline;
+}
+div.page div.cms-item div.date  {
+    font-size:11px;
+    margin:4px 0 5px 0; 
+}
+div.page div.cms-item div.description  {
+    margin:5px 0; 
+    line-height:1.5em;
+}
+
+/* physician list */
+div.page ul.physicians {
+    margin:10px 0;
+    padding:0; 
+}
+div.page ul.physicians li {
+    margin:0 0 10px 0;
+    list-style-type:none;
+}
+div.page ul.physicians li p {
+    margin:0;
+}
+
+div.page table.physicians-sort {
+    margin:10px 0; 
+}
+div.page table.physicians-sort td {
+    padding:2px 8px 2px 0;
+}
+div.page table.physicians-sort select {
+    border:1px solid #5ba494;
+    background:url(../images/bg-input.gif) 0 0 no-repeat;
+    padding:3px;
+    font-size:11px;
+}
+div.page table.physicians-sort input.button {
+    cursor:pointer;
+    border:1px solid #88d0c8;
+    padding:3px; 
+    font:normal 11px arial;
+    background:url(../images/bg-button.gif) 0 0 repeat-x;
+    color:#fff;
+    font-weight:bold;
+}
+div.page table.physicians-sort input.button-hover {
+    background:url(../images/bg-button.gif) 0 -10px repeat-x;
+    color:#fff;
+    font-weight:bold;
+}
+
+div.page p.error { 
+    display:none; 
+}
+
+/* physician list */
+div.page div.opportunities { 
+    margin:0;
+    padding:0; 
+}
+div.page table.opportunities-sort {
+    margin:10px 0;
+}
+div.page table.opportunities-sort td {
+    padding:2px 8px 2px 0;
+}
+div.page table.opportunities-sort select {
+    border:1px solid #5ba494; 
+    background:url(../images/bg-input.gif) 0 0 no-repeat;
+    padding:3px; 
+    font-size:11px;
+}
+div.page table.opportunities-sort input.button { 
+    cursor:pointer;
+    border:1px solid #88d0c8;
+    padding:3px; 
+    font:normal 11px arial;
+    background:url(../images/bg-button.gif) 0 0 repeat-x;
+    color:#fff; 
+    font-weight:bold;
+}
+div.page table.opportunities-sort input.button-hover {
+    background:url(../images/bg-button.gif) 0 -10px repeat-x;
+    color:#fff;
+    font-weight:bold;
+}
+
+/* contact forms */
+div.page form.contact {
+    margin:10px 0;
+    padding:0;
+}
+div.page form.contact fieldset {
+    padding:10px;
+    border:1px solid #88d0c8;
+    margin:0 0 10px 0;
+    display:inline; 
+}
+div.page form.contact legend {
+    padding:3px 5px;
+    border:1px solid #88d0c8; 
+    color:#5ba494;
+    font-size:11px;
+    font-weight:bold;
+    text-transform:uppercase; 
+}
+div.page form.contact table {
+    margin:0; 
+}
+div.page form.contact table td {
+    padding:4px 15px 4px 0;
+    vertical-align:top;
+}
+div.page form.contact table td div {
+    margin:3px 0 0 0;
+}
+div.page form.contact table td span.tip {
+    font-size:11px; 
+    font-style:italic;
+    display:block;
+    position:relative;
+    top:6px; 
+}
+div.page form.contact table label {
+    color:#5ba494;
+    font-size:11px;
+    font-weight:bold;
+    text-transform:uppercase;
+    position:relative;
+    top:5px; 
+}
+div.page form.contact table td div.checkbox label { 
+    position:relative;
+    top:-2px;
+}
+div.page form.contact table input.text {
+    border:1px solid #5ba494;
+    background:url(../images/bg-input.gif) 0 0 no-repeat;
+    padding:3px;
+    font:normal 12px arial;
+    width:200px;
+}
+div.page form.contact table textarea {
+    border:1px solid #5ba494;
+    background:url(../images/bg-input.gif) 0 0 no-repeat;
+    padding:3px;
+    font:normal 12px arial;
+    width:275px;
+    height:80px;
+}
+div.page form.contact table select {
+    border:1px solid #5ba494;
+    background:url(../images/bg-input.gif) 0 0 no-repeat;
+    padding:3px;
+    font:normal 12px arial;
+}
+
+div.page form.contact table select#state {
+    width:120px;
+}
+div.page form.contact table label#zip-label {
+    margin:0 4px 0 10px;
+}
+div.page form.contact table input#zip { 
+    width:50px;
+}
+div.page form.contact table input#attending {
+    width:30px;
+}
+
+div.page form.contact div.submit {
+    margin:10px 0;
+}
+div.page form.contact div.submit input.button {
+    cursor:pointer;
+    border:1px solid #88d0c8;
+    padding:3px;
+    font:normal 11px arial;
+    background:url(../images/bg-button.gif) 0 0 repeat-x;
+    color:#fff; 
+    font-weight:bold;
+}
+div.page form.contact div.submit input.button-hover {
+    background:url(../images/bg-button.gif) 0 -10px repeat-x;
+    color:#fff;
+    font-weight:bold;
+}
+
+div.page form.contact table td.error-message {
+    padding:0; 
+}
+div.page form.contact table td.error-message div {
+    background:#fff;
+    border:1px dashed red;
+    color:red;
+    font-size:11px;
+    padding:2px;
+    margin:0 0 4px 0;
+}
+
+/********************************************************************
+footer
+*********************************************************************/
+div.footer {
+    border-top:1px solid #3b5882;
+    padding:15px 0;
+}
+
+div.footer div.right {
+    float:right; 
+}
+div.footer div.right ul {
+    margin:0;
+    padding:0; 
+    list-style-type:none;
+}
+div.footer div.right ul li {
+    float:right;
+    margin:0 0 0 6px;
+}
+div.footer div.right ul li a {
+    display:block;
+    float:right;
+    text-decoration:none;
+}
+div.footer div.right ul li.facebook a {
+    background:url(../images/footer-icons-facebook.png) 0 0 no-repeat;
+    padding:12px 0 12px 48px;
+}
+
+div.footer div.left {
+    margin-right:290px;
+}
+div.footer ul { 
+    margin:0 0 7px 0; 
+    line-height:1.4em;
+}
+div.footer ul li {
+    display:block;
+    margin:0 0 3px 0; 
+}
+div.footer ul.links { 
+    color:#596a90; 
+}
+div.footer ul.links li {
+    display:inline; 
+}
+div.footer ul li a {
+    color:#596a90;
+    text-decoration:none;
+}
+div.footer ul li a:hover {
+    color:#4f4c4c; 
+    text-decoration:underline;
+}
+
+/********************************************************************
+up to date form
+*********************************************************************/
+div.uptodate { 
+    margin:10px 0;
+    padding:10px; 
+    border:1px solid #5ba494;
+}
+div.uptodate div.logo { 
+    position:relative;
+    background:url(../images/uptodate.gif) 0 0 no-repeat;
+    width:132px;
+    height:50px;
+}
+div.uptodate div.logo div { 
+    position:absolute;
+    top:32px;
+    left:55px; 
+    text-transform:uppercase;
+    font:normal 11px Helvetica, Arial; 
+}
+div.uptodate div.logo div span { 
+    display:none; 
+}
+div.uptodate h3 { 
+    margin:5px 0; 
+}
+div.uptodate p { 
+    margin:5px 0;
+}
+div.uptodate form input#txtSearch {
+    background:url(../images/bg-input.gif) 0 0 no-repeat;
+    border:1px solid #5ba494;
+    width:200px;
+    font:normal 12px arial;
+    padding:3px;
+}
+div.uptodate form input.go {
+    background:#fff;
+    font:bold 12px arial;
+    color:#5ba494;
+    text-transform:uppercase;
+    border:1px solid #5ba494;
+}
+div.uptodate form input.active {
+    background:#5ba494;
+    color:#fff;
+}

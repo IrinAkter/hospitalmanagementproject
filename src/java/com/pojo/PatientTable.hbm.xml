@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2016 7:42:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.PatientTable" table="patient_table" catalog="hospitalmanagement" optimistic-lock="version">
+        <id name="pid" type="string">
+            <column name="pid" length="5" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="user" class="com.pojo.User" fetch="select">
+            <column name="usertype" length="45" not-null="true" />
+        </many-to-one>
+        <property name="pname" type="string">
+            <column name="pname" length="45" not-null="true" />
+        </property>
+        <property name="psex" type="string">
+            <column name="psex" length="45" not-null="true" />
+        </property>
+        <property name="page" type="int">
+            <column name="page" not-null="true" />
+        </property>
+        <property name="bloodg" type="string">
+            <column name="bloodg" length="45" />
+        </property>
+        <property name="weight" type="double">
+            <column name="weight" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="45" not-null="true" />
+        </property>
+        <property name="phoneno" type="string">
+            <column name="phoneno" length="45" not-null="true" />
+        </property>
+        <property name="disease" type="string">
+            <column name="disease" length="45" not-null="true" />
+        </property>
+        <property name="doctorid" type="string">
+            <column name="doctorid" length="45" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

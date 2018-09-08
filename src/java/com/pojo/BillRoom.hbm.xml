@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2016 7:42:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.BillRoom" table="bill_room" catalog="hospitalmanagement" optimistic-lock="version">
+        <id name="billNo" type="java.lang.Integer">
+            <column name="BillNo" />
+            <generator class="identity" />
+        </id>
+        <property name="dischargeId" type="int">
+            <column name="DischargeID" not-null="true" />
+        </property>
+        <property name="billingDate" type="string">
+            <column name="BillingDate" length="45" not-null="true" />
+        </property>
+        <property name="roomCharges" type="java.lang.Double">
+            <column name="RoomCharges" precision="22" scale="0" />
+        </property>
+        <property name="serviceCharges" type="java.lang.Double">
+            <column name="ServiceCharges" precision="22" scale="0" />
+        </property>
+        <property name="chargesPaid" type="java.lang.Double">
+            <column name="ChargesPaid" precision="22" scale="0" />
+        </property>
+        <property name="dueCharges" type="java.lang.Double">
+            <column name="DueCharges" precision="22" scale="0" />
+        </property>
+        <property name="totalCharges" type="double">
+            <column name="TotalCharges" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="noOfDays" type="java.lang.Integer">
+            <column name="NoOfDays" />
+        </property>
+        <property name="totalRoomCharges" type="java.lang.Double">
+            <column name="TotalRoomCharges" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

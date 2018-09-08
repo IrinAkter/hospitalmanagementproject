@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <br />
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+                    <center>
+                <h:form enctype="multipart/form-data">
+
+                        <p:growl id="messages" showDetail="true" />
+                        <h:panelGrid columns="2">
+                            <p:outputLabel value="Accountant Id"/>
+                            <p:inputText value="#{accountantFile.id}"/>
+                            <p:outputLabel value="Accountant Name"/>
+                            <p:inputText value="#{accountantFile.name}"/>
+                            <p:outputLabel value="Accountant Email"/>
+                            <p:inputText value="#{accountantFile.email}"/>
+                            <p:outputLabel value="Accountant Contact No"/>
+                            <p:inputText value="#{accountantFile.contactno}"/>
+                            <p:outputLabel value="Password"/>
+                            <p:password value="#{accountantFile.password}"/>
+                            <p:outputLabel value="Gender"/>
+                            <p:selectOneRadio value="#{accountantFile.gender}">
+                                <f:selectItem itemLabel="Male" itemValue="Male" />
+                                <f:selectItem itemLabel="Female" itemValue="Female" />
+                            </p:selectOneRadio>
+                            <p:outputLabel value="Date Of Birth"/>
+                            <p:calendar value="#{accountantFile.dob}"/>
+                            <p:outputLabel value="Image"/>
+                            <p:fileUpload value="#{accountantFile.image}" mode="simple"/>
+                            <p:outputLabel value="Image Name"/>
+                            <p:inputText value="#{accountantFile.filename}"/>
+                        </h:panelGrid> 
+                        <h:graphicImage id="image" alt="uploaded image" url="resources/images/#{accountantFile.image.fileName}"/>
+                        <center>
+                            <p:commandButton value="Insert" ajax="false" actionListener="#{accountantFile.doSave()}"/>
+                        </center>
+                </h:form>
+            </center>
+    </h:body>
+</html>
+

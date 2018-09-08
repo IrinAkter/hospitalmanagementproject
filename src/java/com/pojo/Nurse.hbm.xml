@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2016 7:42:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Nurse" table="nurse" catalog="hospitalmanagement" optimistic-lock="version">
+        <id name="nurseid" type="string">
+            <column name="nurseid" length="45" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="department" class="com.pojo.Department" fetch="select">
+            <column name="deptid" not-null="true" />
+        </many-to-one>
+        <many-to-one name="employeeTable" class="com.pojo.EmployeeTable" fetch="select">
+            <column name="empid" length="5" not-null="true" unique="true" />
+        </many-to-one>
+        <many-to-one name="user" class="com.pojo.User" fetch="select">
+            <column name="usertype" length="45" not-null="true" />
+        </many-to-one>
+        <property name="nursename" type="string">
+            <column name="nursename" length="45" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2016 7:42:29 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.pojo.DoctorTable" table="doctor_table" catalog="hospitalmanagement" optimistic-lock="version">
+        <id name="doctorid" type="string">
+            <column name="doctorid" length="5" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="department" class="com.pojo.Department" fetch="select">
+            <column name="dept" not-null="true" />
+        </many-to-one>
+        <many-to-one name="employeeTable" class="com.pojo.EmployeeTable" fetch="select">
+            <column name="empid" length="5" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="com.pojo.User" fetch="select">
+            <column name="usertype" length="45" not-null="true" />
+        </many-to-one>
+        <property name="doctorname" type="string">
+            <column name="doctorname" length="45" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="45" not-null="true" />
+        </property>
+        <property name="contactNo" type="string">
+            <column name="contact_no" length="45" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" />
+        </property>
+        <property name="joiningDate" type="date">
+            <column name="joining_date" length="10" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" not-null="true" />
+        </property>
+        <property name="department_1" type="string">
+            <column name="department" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
